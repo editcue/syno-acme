@@ -36,7 +36,7 @@ sudo mv /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt.ba
 ```
 如果无法链接 https://curl.se/ca/cacert.pem 时，请选用方法二手动翻墙下载并更新
 
-方法二：
+## 方法二：
 
 1、下载CA机构根证书
 下载地址 https://curl.se/ca/cacert.pem
