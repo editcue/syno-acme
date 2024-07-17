@@ -10,7 +10,8 @@ import os
 CERT_FILES = [
     'cert.pem',
     'privkey.pem',
-    'fullchain.pem'
+    'fullchain.pem',
+    'chain.pem'
 ]
 
 SRC_DIR_NAME = sys.argv[1]

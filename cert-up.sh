@@ -85,6 +85,14 @@ generateCrt () {
     --key-file ${CRT_PATH}/privkey.pem \
     --fullchain-file ${CRT_PATH}/fullchain.pem
 
+  # copy and rename  ${ACME_BIN_PATH}/${DOMAIN}/ca.cer to chain.pem
+  if [ -s "${ACME_BIN_PATH}/${DOMAIN}/ca.cer" ]; then
+    cp ${ACME_BIN_PATH}/${DOMAIN}/ca.cer ${CRT_PATH}/chain.pem
+    echo 'copy and rename ca.cer to chain.pem'
+  else
+    echo 'no ca.cer file found , chain.pem generate fail'
+  fi
+
   if [ -s "${CRT_PATH}/cert.pem" ]; then
     echo 'done generateCrt'
     return 0
